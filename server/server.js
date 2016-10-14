@@ -2,8 +2,11 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var path = require('path');
 
 var app = module.exports = loopback();
+app.set('view engine', 'ejs');
+app.set('json spaces', 2);
 
 app.start = function() {
   // start the web server
